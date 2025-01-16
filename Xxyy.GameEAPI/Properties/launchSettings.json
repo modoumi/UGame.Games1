@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Xxyy.GameEAPI": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "dev"
+      },
+      "applicationUrl": "https://localhost:62169;http://localhost:62171"
+    }
+  }
+}

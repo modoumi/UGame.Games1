@@ -1,0 +1,84 @@
+{
+    "AppOptions": {
+        "AppId": "gameserver01",
+        "ServerType": "Normal",
+        "ServerUrl": "http://192.168.1.121:7001",
+        "UseVerifyClientRequest": false
+    },
+    "Project": {
+        "ProjectId": "gameserver01",
+        "Description": "GameServer01-WebAPI",
+        "MinThreads": 0,
+        "ConsoleLogLevel": "Debug",
+        "ResponseErrorDetail": true,
+        "IsDebugEnvironment": true
+    },
+    "Data": {
+        "ConnectionStrings": {
+            "game": {
+                "ProviderName": "mysql",
+                "ConnectionString": "server=192.168.1.120;port=3306;database=gdb;user id=root;password=root;sslmode=Disabled;allowuservariables=True",
+                "ReadConnectionString": "",
+                "CommandTimeout": "30",
+                "InstProvider": "",
+                "OrmMap": "Fortune_tiger.DAL;Super_phoenix.DAL;Mexico_fortune.DAL;Fortune_ox.DAL;Fortune_rabbit.DAL;Fortune_mouse.DAL"
+            }
+        }
+    },
+    "RabbitMQ": {
+        "MessageAssemblies": [ "Xxyy.GameEAPI.dll" ],
+        "ConsumerAssemblies": [
+            "Fortune_tiger.BLL.dll",
+            "Fortune_ox.BLL.dll",
+            "Mexico_fortune.BLL.dll",
+            "Super_phoenix.BLL.dll",
+            "Fortune_rabbit.BLL.dll",
+            "Fortune_mouse.BLL.dll"
+        ]
+    },
+    "AutoMapper": {
+        "Assemblies": [
+            "Fortune_tiger.BLL.dll",
+            "Fortune_ox.BLL.dll",
+            "Mexico_fortune.BLL.dll",
+            "Super_phoenix.BLL.dll",
+            "Xxyy.GameEAPI.dll",
+            "Fortune_rabbit.BLL.dll",
+            "Fortune_mouse.BLL.dll"
+        ]
+    },
+    "HttpClient": {
+        "Clients": {
+            "xxyy.banks": {
+                "BaseAddress": "http://192.168.1.121:9008",
+                "RequestHeaders": [],
+                "Timeout": 20000,
+                "RetryCount": 3,
+                "Settings": []
+            },
+            "xxyy.server": {
+                "BaseAddress": "http://192.168.1.121:9009",
+                "RequestHeaders": [],
+                "Timeout": 20000,
+                "RetryCount": 3,
+                "Settings": []
+            },
+            "xxyy_partners": {
+                "BaseAddress": "http://192.168.1.121:9010",
+                "RequestHeaders": [],
+                "Timeout": 100000,
+                "RetryCount": 3,
+                "Settings": []
+            }
+        }
+    },
+    "IDGenerator": {
+        "Enabled": true
+    },
+    "AspNet": {
+        "Swagger": {
+            "Enabled": true,
+            "UseSchemaFullName": true
+        }
+    }
+}

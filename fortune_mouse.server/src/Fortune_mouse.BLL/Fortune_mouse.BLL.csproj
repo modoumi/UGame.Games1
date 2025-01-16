@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="LoadSvc\Phoenix\**" />
+    <Compile Remove="LoadSvc\Tiger\**" />
+    <EmbeddedResource Remove="LoadSvc\Phoenix\**" />
+    <EmbeddedResource Remove="LoadSvc\Tiger\**" />
+    <None Remove="LoadSvc\Phoenix\**" />
+    <None Remove="LoadSvc\Tiger\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Xxyy.GameEAPI\Xxyy.GameEAPI.csproj" />
+    <ProjectReference Include="..\Fortune_mouse.DAL\Fortune_mouse.DAL.csproj" />
+  </ItemGroup>
+
+</Project>

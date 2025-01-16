@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Xxyy.GameEAPI\Xxyy.GameEAPI.csproj" />
+    <ProjectReference Include="..\Mexico_fortune.DAL\Mexico_fortune.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xxyy.Common" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,91 @@
+{
+  "DockerPublish": {
+    "DefaultConfig": "dev",
+    "Configs": [
+        {
+            "Name": "dev",
+            "Desc": "开发测试环境",
+            "BuildMode": 0,
+            "DockerfilePath": "",
+            "ServerIp": "192.168.1.121",
+            "Port": "22",
+            "Username": "root",
+            "Password": "Ing*zhixin@2022",
+            "IsSsh": false,
+            "ServerPath": "/root/hosts/Mexico_fortune.WebAPI/upload",
+            "ImageName": "mcr.microsoft.com/dotnet/aspnet:6.0",
+            "ImgLocalPath": "images",
+            "ImgServerPath": "/root/hosts/Mexico_fortune.WebAPI/images",
+            "Containers": [
+                {
+                    "Name": "mexico_fortune.webapi.01",
+                    "PortString": "-p 9005:80",
+                    "EnvString": "-e DOTNET_ENVIRONMENT=Testing",
+                    "LimitCoreFile": true,
+                    "ServerPath": "",
+                    "IsDefault": true,
+                    "ServerType": null,
+                    "IsHost": false,
+                    "IsAspNet": false
+                }
+            ]
+        },
+        {
+            "Name": "aws-host01",
+            "Desc": "",
+            "BuildMode": 0,
+            "DockerfilePath": "",
+            "ServerIp": "35.155.112.208",
+            "Port": "22",
+            "Username": "root",
+            "Password": "ivknOgGhUI5FlQRUSXsjs",
+            "IsSsh": false,
+            "ServerPath": "/home/ubuntu/hosts/Mexico_fortune.WebAPI/upload",
+            "ImageName": "mcr.microsoft.com/dotnet/aspnet:6.0",
+            "ImgLocalPath": "images",
+            "ImgServerPath": "/root/services/Xxyy.WebAPI/images",
+            "Containers": [
+                {
+                    "Name": "mexico_fortune.webapi",
+                    "PortString": "9005",
+                    "EnvString": "",
+                    "LimitCoreFile": true,
+                    "ServerPath": "/home/ubuntu/hosts/Mexico_fortune.WebAPI/mexico_fortune.webapi",
+                    "IsDefault": true,
+                    "ServerType": null,
+                    "IsHost": true,
+                    "IsAspNet": true
+                }
+            ]
+        },
+        {
+            "Name": "default",
+            "Desc": "qa测试环境",
+            "BuildMode": 0,
+            "DockerfilePath": "",
+            "ServerIp": "192.168.1.128",
+            "Port": "22",
+            "Username": "root",
+            "Password": "Ing*zhixin@2022",
+            "IsSsh": false,
+            "ServerPath": "/root/hosts/Mexico_fortune.WebAPI/upload",
+            "ImageName": "mcr.microsoft.com/dotnet/aspnet:6.0",
+            "ImgLocalPath": "",
+            "ImgServerPath": "",
+            "Containers": [
+                {
+                    "Name": "mexico_fortune.webapi.01",
+                    "PortString": "-p 9005:80",
+                    "EnvString": "-e DOTNET_ENVIRONMENT=qa",
+                    "LimitCoreFile": true,
+                    "ServerPath": "",
+                    "IsDefault": true,
+                    "ServerType": null,
+                    "IsHost": false,
+                    "IsAspNet": false
+                }
+            ]
+        }
+    ]
+  }
+}

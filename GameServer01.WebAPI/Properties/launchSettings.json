@@ -1,0 +1,61 @@
+{
+    "profiles": {
+        "GameServer01.WebAPI.dev": {
+            "commandName": "Project",
+            "launchBrowser": true,
+            "launchUrl": "swagger",
+            "dotnetRunMessages": true,
+            "applicationUrl": "http://localhost:7001",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "dev"
+            }
+        },
+        "GameServer01.WebAPI.fat": {
+            "commandName": "Project",
+            "launchBrowser": true,
+            "launchUrl": "swagger",
+            "dotnetRunMessages": true,
+            "applicationUrl": "http://localhost:7001",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "fat"
+            }
+        },
+        "GameServer01.WebAPI.us-west-2": {
+            "commandName": "Project",
+            "launchBrowser": true,
+            "launchUrl": "swagger",
+            "dotnetRunMessages": true,
+            "applicationUrl": "http://localhost:7001",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "us-west-2"
+            }
+        },
+        "GameServer01.WebAPI.us-west-2.debug": {
+            "commandName": "Project",
+            "launchBrowser": true,
+            "launchUrl": "swagger",
+            "dotnetRunMessages": true,
+            "applicationUrl": "http://localhost:7001",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "us-west-2.debug"
+            }
+        },
+        "IIS Express": {
+            "commandName": "IISExpress",
+            "launchBrowser": true,
+            "launchUrl": "weatherforecast",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "fat"
+            }
+        }
+    },
+    "$schema": "https://json.schemastore.org/launchsettings.json",
+    "iisSettings": {
+        "windowsAuthentication": false,
+        "anonymousAuthentication": true,
+        "iisExpress": {
+            "applicationUrl": "http://localhost:4044",
+            "sslPort": 44393
+        }
+    }
+}

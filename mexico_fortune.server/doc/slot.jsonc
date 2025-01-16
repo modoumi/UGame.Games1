@@ -1,0 +1,37 @@
+{
+	//玩家信息
+	"playerInfo":{
+		"balance": 9990//玩家身上的钱
+	},
+	//总的结果信息
+	"resultInfo":{
+		"slotEle":[[1,2,3], [2,3,4], [3,4,5], [4,5,6], [5,6,7]],//slot上的元素
+		"totalReward":10000,//所有line的奖励总和
+		"totalMulti":30,//中奖总倍数
+		"rewardDetails":[
+			{
+				"line": 2,//线束
+				"reward": 3000,//奖励
+				"sameUnitCount": 4,//同样元素数量
+				"multi":0.5//中奖倍数，可能不需要
+			}, 
+			{
+				"line": 5,//线束
+				"reward": 3000,//奖励
+				"sameUnitCount": 4,//同样元素数量
+				"multi":2//中奖倍数，可能不需要
+			}
+		],
+		"freeSpinCount" : 3,//免费摇奖次数
+		"freeSpinTotalReward":10000,//free spin次数的总奖励，如果耗光重置为0，用户退出也需要记录，下一次进入还得有
+		"addFreeSpinCountList" : [1, 2],//添加的freeSpin对应slot ele上的奖励次数
+		
+		"lottoryResultInfo":{//彩票结果信息
+			"isTriggerJpReward": true,//是否收集齐彩票，触发jp抽奖
+			"jpReward":100,//jp开奖值，如果isTriggerJpReward是false就是0，如果是true，取meta中betJpBonus对应bet档位上的某一档奖励
+			"lottoryEle":[[1,16,31,46,61], [2,17,32,47,62], [3,18,33,48,63], [4,19,34,49,64], [5,20,35,50,65]],//彩票25球信息
+			"newEle":[1,4,8,10,12],//新出现的元素，最多可能有5个，对应slot ele上的数字
+		}
+		
+	}
+}

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="RankSvc\Process\**" />
+    <EmbeddedResource Remove="RankSvc\Process\**" />
+    <None Remove="RankSvc\Process\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Xxyy.GameEAPI\Xxyy.GameEAPI.csproj" />
+    <ProjectReference Include="..\Super_phoenix.DAL\Super_phoenix.DAL.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <Version>1.0.51</Version>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="DAL\**" />
+    <EmbeddedResource Remove="DAL\**" />
+    <None Remove="DAL\**" />
+  </ItemGroup>
+  <!--<ItemGroup>
+    <Compile Remove="DAL\**" />
+    <EmbeddedResource Remove="DAL\**" />
+    <None Remove="DAL\**" />
+  </ItemGroup>-->
+  <ItemGroup>
+    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+    <PackageReference Include="AiUo.AspNet.Hosting" Version="1.0.0" />
+    <PackageReference Include="AiUo.BIZ.RabbitMQ" Version="1.0.0" />
+    <PackageReference Include="AiUo.Data.MySql" Version="1.0.0" />
+    <PackageReference Include="AiUo.SnowflakeId" Version="1.0.0" />
+    <PackageReference Include="Xxyy.Partners.Client" Version="1.1.107" />
+  </ItemGroup>
+</Project>
